@@ -161,7 +161,7 @@ def searchCustomer():
         if data:
             print("%8s"%"ID","%25s"%"NAME","%25s"%"ADDRESS","%15s"%"AGE","%15s"%"PHONE NO","%15s"%"EMAIL")
             for row in data:
-                print("%8s"%row[0],"%25s"%row[1],"%25s"%row[2],"%15s"%row[3],"%20s"%row[4],"%20s"%row[5])
+                print("%8s"%row[0],"%25s"%row[1],"%25s"%row[2],"%15s"%row[3],"%15s"%row[4],"%15s"%row[5])
             return True
         else:
             print("Record Not Found Try Again!")
@@ -202,7 +202,7 @@ def deleteCustomer():
 
 print("""
  ********************** HOTEL MANAGEMENT SYSTEM ***********************
- *********************** HOOBA LODGING SERVICES ***********************
+ *********************** MAMTA LODGING SERVICES ***********************
  """)
 myConnection = MYSQLconnectionCheck()
 if myConnection:
@@ -230,6 +230,7 @@ if myConnection:
         elif choice == '6':
             deleteCustomer()
         elif choice == '0':
+            print("Goodbye! Have a nice day!")
             myConnection.close()
             break
         else:
